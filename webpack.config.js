@@ -17,6 +17,14 @@ module.exports = {
                     minimize: true
                 }
             }]
+        }, {
+            test: /\.(png|jp(e*)g|svg)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'assets/images/'
+                }
+            }]
         }]
     },
     plugins: [

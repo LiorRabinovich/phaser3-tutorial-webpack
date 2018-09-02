@@ -1,5 +1,12 @@
 import Phaser from 'phaser';
 
+import skyIMG from './assets/images/sky.png';
+import groundIMG from './assets/images/platform.png';
+import starIMG from './assets/images/star.png';
+import bombIMG from './assets/images/bomb.png';
+import dudeIMG from './assets/images/dude.png';
+
+
 var config = {
     type: Phaser.AUTO,
     width: 800,
@@ -31,11 +38,11 @@ var game = new Phaser.Game(config);
 
 
 function preload() {
-    this.load.image('sky', './assets/images/sky.png');
-    this.load.image('ground', './assets/images/platform.png');
-    this.load.image('star', './assets/images/star.png');
-    this.load.image('bomb', './assets/images/bomb.png');
-    this.load.spritesheet('dude', './assets/images/dude.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.image('sky', skyIMG);
+    this.load.image('ground', groundIMG);
+    this.load.image('star', starIMG);
+    this.load.image('bomb', bombIMG);
+    this.load.spritesheet('dude', dudeIMG, { frameWidth: 32, frameHeight: 48 });
 }
 
 function create() {
